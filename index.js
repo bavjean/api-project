@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const Joke = require("./lib/models/Joke");
 
 app.use(express.json());
+app.use(cors());
 
 // Redirect
 app.get("/", (req, res) => {
@@ -27,7 +29,7 @@ app.get("/jokes/:id", (req, res) => {
 
 // Get random joke
 app.get("/random", (req, res) => {
-  Joke.count().then((count) => {
+  Joke.countDocuments().then((count) => {
     let random = Math.floor(Math.random() * count);
     Joke.findOne()
       .skip(random)
