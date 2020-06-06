@@ -71,7 +71,10 @@ app.delete("/jokes/:id", (req, res) => {
     .catch((err) => console.log("Error: ", err));
 });
 
-// Listen on port 3000
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+// Get port from env
+app.set("port", process.env.PORT || 8080);
+
+// Listen
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
 });
