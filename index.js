@@ -8,7 +8,7 @@ app.use(cors());
 
 // Redirect
 app.get("/", (req, res) => {
-  let url = "http://localhost:3000/jokes";
+  let url = "https://whispering-meadow-11234.herokuapp.com/jokes";
   res.redirect(url);
 });
 
@@ -72,7 +72,7 @@ app.delete("/jokes/:id", (req, res) => {
 });
 
 // Get port from env
-app.set("port", process.env.PORT || 8080);
+app.set("port", process.env.PORT || 3000);
 
 // Listen
 app.listen(app.get("port"), () => {
