@@ -22,6 +22,8 @@ GET request will display all jokes in the database
 
 `/jokes/3`
 GET request to display a joke specific to the id number
+
+```
 {
 "categories": [
 
@@ -31,10 +33,12 @@ GET request to display a joke specific to the id number
 "joke": "Chuck Norris doesn't read books. He stares them down until he gets the information he wants.",
 "\_\_v": 0
 }
+```
 
 `/random`
 GET request to display a random joke.
 
+```
 {
 "categories": [
 "nerdy"
@@ -44,6 +48,7 @@ GET request to display a random joke.
 "joke": "Chuck Norris knows the value of NULL, and he can sort by it too.",
 "\_\_v": 0
 }
+```
 
 `/jokes/category/:category`
 GET request will display all jokes within the specified category (nerdy,explicit)
